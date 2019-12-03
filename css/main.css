@@ -338,7 +338,11 @@ section {
     transition: color 0.3s, box-shadow 0.3s;
     transition: color 0.3s, box-shadow 0.3s, -webkit-box-shadow 0.3s;
     font-family: TeXGyreAdventor-Italic;
-    cursor: pointer; }
+    cursor: pointer; 
+    @media screen and(max-width: 360px) {
+          font-size: 16px;
+        }
+}
     .section-about .about__btn:hover {
       color: #3b42a0;
       -webkit-box-shadow: inset 0 0 8px #3b42a0;
