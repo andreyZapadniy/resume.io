@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "TeXGyreAdventor";
+  src: url("../fonts/TeXGyreAdventor-Regular.eot");
+  src: local("TeXGyreAdventor-Regular"), local("../fonts/TeXGyreAdventor-Regular"),
+    url("../fonts/TeXGyreAdventor-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/TeXGyreAdventor-Regular.woff") format("woff"),
+    url("../fonts/TeXGyreAdventor-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TeXGyreAdventor-Italic";
+  src: url("../fonts/TeXGyreAdventor-Italic.eot");
+  src: local("TeXGyreAdventor-Italic"), local("../fonts/TeXGyreAdventor-Italic"),
+    url("../fonts/TeXGyreAdventor-Italic.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/TeXGyreAdventor-Italic.woff") format("woff"),
+    url("../fonts/TeXGyreAdventor-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "TeXGyreAdventor-Bold";
+  src: url("../fonts/TeXGyreAdventor-Bold.eot");
+  src: local("TeXGyreAdventor-Bold"), local("../fonts/TeXGyreAdventor-Bold"),
+    url("../fonts/TeXGyreAdventor-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/TeXGyreAdventor-Bold.woff") format("woff"),
+    url("../fonts/TeXGyreAdventor-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}

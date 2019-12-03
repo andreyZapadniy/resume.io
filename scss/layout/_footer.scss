@@ -1,0 +1,11 @@
+.footer {
+  background: #282828;
+  text-align: center;
+  padding: 10px;
+  color: rgb(168, 168, 168);
+  &__title {
+    @media screen and(max-width: 400px) {
+      font-size: 14px;
+    }
+  }
+}

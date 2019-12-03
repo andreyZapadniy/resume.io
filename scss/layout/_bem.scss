@@ -1,0 +1,125 @@
+.head {
+  color: #3e3e3e;
+  font-size: 28px;
+  text-align: center;
+  font-family: TeXGyreAdventor-Bold;
+  padding-top: 60px;
+  margin-bottom: 40px;
+  position: relative;
+  &_padding0 {
+    padding-top: 10px;
+  }
+  &_color {
+    color: #fff;
+    &:before,
+    &:after {
+      background: rgb(189, 187, 187) !important;
+    }
+  }
+  &:before {
+    position: absolute;
+    content: "";
+    width: 10%;
+    height: 2px;
+    background: #000;
+    top: 110%;
+    left: 50%;
+    transform: translate(-50%);
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    @media screen and(max-width: 520px) {
+      width: 15%;
+    }
+    @media screen and(max-width: 360px) {
+      width: 20%;
+    }
+  }
+}
+.right {
+  margin-left: 35%;
+  @media screen and(max-width: 880px) {
+    margin-left: 15%;
+  }
+  @media screen and(max-width: 768px) {
+    margin-left: 35%;
+  }
+  @media screen and(max-width: 480px) {
+    margin-left: 0;
+    font-size: 28px;
+  }
+  @media screen and(max-width: 320px) {
+    font-size: 26px;
+  }
+}
+.title,
+.subtitle {
+  color: #000;
+  font-size: 30px;
+  @media screen and (max-width: 880px) {
+    font-size: 24px;
+  }
+}
+.subtitle {
+  font-size: 24px;
+  @media screen and (max-width: 768px) {
+    font-size: 18px;
+  }
+  @media screen and (max-width: 640px) {
+    font-size: 16px;
+  }
+}
+
+.btn {
+  font-size: 20px;
+  font-style: italic;
+  padding: 10px 15px;
+  border: 2px solid rgb(122, 130, 233);
+  border-radius: 15px;
+  background: transparent;
+  display: inline-block;
+  transition: 0.5s;
+
+  &_absolute {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translate(-50%);
+    @media screen and (max-width: 640px) {
+      bottom: 30%;
+      left: 49%;
+    }
+    @media screen and (max-width: 400px) {
+      bottom: 30%;
+    }
+    @media screen and (max-width: 320px) {
+      bottom: 21%;
+      left: 50%;
+    }
+  }
+
+  &_partner {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @media screen and (max-width: 640px) {
+      bottom: -10px;
+    }
+    @media screen and (max-width: 400px) {
+      bottom: 0px;
+    }
+  }
+
+  &:hover {
+    border: 2px solid rgb(0, 17, 255);
+    background: #46f1f7d9;
+    color: #2600ff;
+  }
+
+  &_active {
+    border: 2px solid rgb(0, 17, 255);
+    background: #46f1f7d9;
+    color: #2600ff;
+    z-index: 22;
+  }
+}

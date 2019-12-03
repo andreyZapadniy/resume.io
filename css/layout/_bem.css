@@ -1,0 +1,6 @@
+box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  box__info {
+    border: 1px solid #e1e1e1; }

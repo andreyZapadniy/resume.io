@@ -1,0 +1,48 @@
+.header {
+  position: fixed;
+  background: #282828;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    &-items {
+      margin-right: 20px;
+      @media screen and(max-width: 480px) {
+        margin-right: 5px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    &-link {
+      font-size: 100%;
+      color: #fff;
+      padding: 5px 15px;
+      border-radius: 10px;
+      transition: 0.3s;
+      @media screen and(max-width: 400px) {
+        font-size: 14px;
+        padding: 5px 10px;
+      }
+      @media screen and(max-width: 400px) {
+        font-size: 13px;
+        padding: 5px 8px;
+      }
+
+      &:hover {
+        background: #3b3b3b;
+        color: rgb(193, 192, 238);
+      }
+    }
+  }
+  .active {
+    background: #3b3b3b;
+    color: rgb(193, 192, 238);
+  }
+}
