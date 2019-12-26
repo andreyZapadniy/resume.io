@@ -603,8 +603,11 @@ section {
         .section-game .setting__num-text, .section-game .setting__radio-text, .section-game .setting__check-text {
           font-size: 14px; } }
     .section-game .setting__num-text {
-      text-align: left;
+      text-align: center;
       position: relative; }
+      @media screen and (max-width: 800px) {
+        .section-game .setting__num-text {
+          text-align: left; } }
       .section-game .setting__num-text_margin1 {
         margin-top: 30px; }
         @media screen and (max-width: 400px) {
@@ -744,6 +747,9 @@ section {
         opacity: 1;
         -webkit-animation: circleDots 1s 0.4s linear infinite;
         animation: circleDots 1s 0.4s linear infinite; }
+  @media screen and (max-width: 800px) {
+    .section-game .wrapp-num:last-child {
+      margin-bottom: 20px; } }
   @media screen and (max-width: 400px) {
     .section-game .wrapp-num {
       display: -webkit-box;
@@ -760,10 +766,18 @@ section {
     padding: 5px 0;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
-    transition: 0.3s; }
+    transition: 0.3s;
+    width: 40%; }
+    @media screen and (max-width: 800px) {
+      .section-game .block-game {
+        padding: 5px 5px 15px;
+        width: auto; } }
     @media screen and (max-width: 400px) {
       .section-game .block-game {
         width: 100%; } }
+  @media screen and (max-width: 800px) {
+    .section-game .block-game:last-child .setting__num-text {
+      text-align: center; } }
   .section-game .info1,
   .section-game .info2 {
     position: relative;
@@ -824,7 +838,7 @@ section {
   .section-game .check-in {
     width: 70px;
     height: 30px;
-    margin: 0 15px 0 0;
+    margin: 0 10px 0 0;
     border-radius: 20px;
     outline: none;
     border: none;

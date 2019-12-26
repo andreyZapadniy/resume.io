@@ -381,6 +381,7 @@ start.addEventListener("click", (e) => {
             if (+money.value <= 0) {
                 money.value = 0;
                 outNum.innerHTML = "Конец игры";
+                thisNum.style.opacity = 0;
                 info1.classList.add("info-active");
                 setTimeout(() => {
                     info1.classList.remove("info-active");

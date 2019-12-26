@@ -332,8 +332,11 @@
       }
     }
     &__num-text {
-      text-align: left;
+      text-align: center;
       position: relative;
+      @media screen and(max-width: 800px) {
+        text-align: left;
+      }
       &_margin1 {
         margin-top: 30px;
         @media screen and(max-width: 400px) {
@@ -467,6 +470,11 @@
       }
     }
   }
+  .wrapp-num:last-child {
+    @media screen and(max-width: 800px) {
+      margin-bottom: 20px;
+    }
+  }
   .wrapp-num {
     @media screen and(max-width: 400px) {
       display: flex;
@@ -478,8 +486,18 @@
     border-radius: 10px;
     padding: 5px 0;
     transition: 0.3s;
+    width: 40%;
+    @media screen and(max-width: 800px) {
+      padding: 5px 5px 15px;
+      width: auto;
+    }
     @media screen and(max-width: 400px) {
       width: 100%;
+    }
+  }
+  .block-game:last-child .setting__num-text {
+    @media screen and(max-width: 800px) {
+      text-align: center;
     }
   }
   .info1,
@@ -541,7 +559,7 @@
   .check-in {
     width: 70px;
     height: 30px;
-    margin: 0 15px 0 0;
+    margin: 0 10px 0 0;
     border-radius: 20px;
     outline: none;
     border: none;
