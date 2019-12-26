@@ -9,11 +9,14 @@
       transform: rotateY(180deg);
     }
   }
+  .wrapp-btn {
+    text-align: center;
+  }
   .about {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 150px;
+    padding-bottom: 100px;
     @media screen and(max-width: 768px) {
       flex-direction: column;
     }
@@ -82,16 +85,13 @@
       padding: 0 3px;
     }
     &__btn {
-      position: absolute;
-      left: 50%;
-      bottom: 25px;
-      transform: translate(-50%);
       font-size: 20px;
       border: none;
       outline: none;
       border-radius: 10px;
       text-transform: uppercase;
       padding: 10px 20px;
+      margin-right: 15px;
       color: rgba(131, 137, 214, 0.5);
       transition: color 0.3s, box-shadow 0.3s;
       font-family: TeXGyreAdventor-Italic;
@@ -189,6 +189,459 @@
     height: 100%;
     margin: auto;
   }
+}
+#mini-game {
+  @media screen and(max-width: 360px) {
+    margin-top: 15px;
+  }
+}
+.section-game {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 120px 15px 0;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  transition: 1s;
+  @media screen and(max-width: 800px) {
+    flex-direction: column;
+  }
+  .hide {
+    @media screen and(max-width: 320px) {
+      display: none;
+    }
+  }
+  .circle {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    border-radius: 100%;
+    background: rgb(51, 83, 189);
+    box-shadow: 5px 1px 20px 1px #38383a, inset 0px 0px 60px #274d85;
+    @media screen and(max-width: 800px) {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      top: 47%;
+      opacity: 0.4;
+      left: 50%;
+      transform: translate(-50%);
+      transition: 0.4s;
+    }
+    @media screen and(max-width: 400px) {
+      display: none;
+    }
+    &:before {
+      position: absolute;
+      content: "";
+      width: 100px;
+      height: 100px;
+      border-radius: 100%;
+      background: floralwhite;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0px 0px 100px 0px mediumblue, inset 0 0 55px 0px mediumpurple;
+      @media screen and(max-width: 800px) {
+        width: 50px;
+        height: 50px;
+      }
+    }
+    &__num {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
+      opacity: 0;
+      width: 50px;
+      border: none;
+      outline: none;
+      background: transparent;
+      font-size: 28px;
+      color: darkslateblue;
+      text-align: center;
+      transition: 0.6s;
+      @media screen and(max-width: 800px) {
+        font-size: 18px;
+      }
+    }
+    &__shine {
+      width: 74px;
+      height: 41px;
+      border-radius: 100%;
+      background: floralwhite;
+      position: absolute;
+      z-index: 2;
+      top: 21%;
+      left: 0%;
+      transform: rotateX(45deg) rotateY(-58deg);
+      box-shadow: 0px 0px 8px 6px white;
+      @media screen and(max-width: 800px) {
+        width: 35px;
+        height: 20px;
+      }
+    }
+    &__active {
+      animation: circleStep 1s linear;
+    }
+    &__active2 {
+      animation: circleStep2 1s linear;
+    }
+  }
+  .setting {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    &__text {
+      &_absolute {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%);
+      }
+    }
+    &__title {
+      @media screen and(max-width: 480px) {
+        font-size: 16px;
+      }
+    }
+    .wrapp-game {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @media screen and(max-width: 400px) {
+        flex-direction: column;
+      }
+    }
+    &__num-text,
+    &__radio-text,
+    &__check-text {
+      font-size: 20px;
+      @media screen and(max-width: 520px) {
+        font-size: 16px;
+      }
+      @media screen and(max-width: 400px) {
+        font-size: 14px;
+      }
+    }
+    &__num-text {
+      text-align: left;
+      position: relative;
+      &_margin1 {
+        margin-top: 30px;
+        @media screen and(max-width: 400px) {
+          margin-top: 10px;
+        }
+      }
+      &_margin2 {
+        margin-top: 15px;
+        @media screen and(max-width: 400px) {
+          margin-top: 10px;
+        }
+      }
+    }
+    &__arrow-up,
+    &__arrow-down {
+      position: absolute;
+      content: "";
+      width: 15px;
+      height: 20px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      display: none;
+      @media screen and(max-width: 800px) {
+        display: block;
+      }
+    }
+    &__arrow-up {
+      background-image: url("../img/arrow_game.png");
+      left: 48px;
+      top: -2px;
+      @media screen and(max-width: 520px) {
+        top: -5px;
+      }
+      @media screen and(max-width: 400px) {
+        top: -8px;
+      }
+    }
+    &__arrow-down {
+      background-image: url("../img/arrow_game.png");
+      left: 48px;
+      top: 22px;
+      transform: rotate(180deg);
+      @media screen and(max-width: 520px) {
+        top: 20px;
+      }
+      @media screen and(max-width: 400px) {
+        top: 15px;
+      }
+    }
+    &__check-text {
+      font-size: 16px;
+      color: blue;
+      position: relative;
+      transition: 0.3s;
+      cursor: pointer;
+      &:before {
+        position: absolute;
+        content: "";
+        width: 90%;
+        height: 2px;
+        left: 52%;
+        transform: translate(-50%);
+        background: #38383a;
+        bottom: -5px;
+      }
+    }
+    &__checkbox {
+      margin-bottom: 15px;
+      width: 18px;
+      height: 18px;
+      outline: none;
+      vertical-align: sub;
+      cursor: pointer;
+      outline: none !important;
+    }
+    &__radio {
+      width: 18px;
+      height: 22px;
+      vertical-align: sub;
+      cursor: pointer;
+    }
+    &__form {
+      position: relative;
+    }
+    &__out-num {
+      display: none;
+
+      @media screen and(max-width: 400px) {
+        transition: 0.4s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+      }
+      .anim-circle {
+        margin: 6px 0 0 4px;
+        display: none;
+        width: 5px;
+        height: 5px;
+        border-radius: 100%;
+        background: #282828;
+        transition: 0.3s;
+      }
+      .this__num {
+        margin: 5px 0 0 5px;
+        opacity: 0;
+        width: 20px;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        background: transparent;
+        color: darkslateblue;
+        text-align: center;
+        transition: 0.6s;
+        display: none;
+      }
+      .text-out {
+        line-height: 26px;
+        font-size: 18px;
+        transition: 0.2s;
+      }
+      .play0 {
+        display: inline-block;
+        opacity: 1;
+        animation: circleDots 1s linear infinite;
+      }
+      .play1 {
+        display: inline-block;
+        opacity: 1;
+        animation: circleDots 1s 0.2s linear infinite;
+      }
+      .play2 {
+        display: inline-block;
+        opacity: 1;
+        animation: circleDots 1s 0.4s linear infinite;
+      }
+    }
+  }
+  .wrapp-num {
+    @media screen and(max-width: 400px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  .block-game {
+    border-radius: 10px;
+    padding: 5px 0;
+    transition: 0.3s;
+    @media screen and(max-width: 400px) {
+      width: 100%;
+    }
+  }
+  .info1,
+  .info2 {
+    position: relative;
+    cursor: pointer;
+    &:after {
+      position: absolute;
+      content: "?";
+      background: cadetblue;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      right: -40px;
+      top: 53%;
+      transform: translate(-50%, -50%);
+      font-size: 14px;
+      transition: 0.3s;
+    }
+    &:hover {
+      &:after {
+        color: #fff;
+        background: rgb(54, 91, 92);
+      }
+    }
+  }
+  .info1,
+  .info2 {
+    z-index: 5;
+  }
+  .text-info1,
+  .text-info2 {
+    position: absolute;
+    background: #fff;
+    width: 75%;
+    padding: 10px 25px;
+    left: 50%;
+    top: 2%;
+    opacity: 0;
+    z-index: 2;
+    font-size: 18px;
+    transform: translate(-50%);
+    border-radius: 20px;
+    pointer-events: none;
+    transition: 0.4s;
+    @media screen and(max-width: 520px) {
+      font-size: 16px;
+      width: 100%;
+    }
+  }
+  .text-info2 {
+    top: -20%;
+  }
+  .check-in {
+    width: 70px;
+    height: 30px;
+    margin: 0 15px 0 0;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    text-align: center;
+    font-size: 18px;
+    background-color: darkgray;
+    color: #fff;
+    cursor: n-resize;
+    @media screen and(max-width: 800px) {
+      width: 45px;
+      height: 23px;
+      font-size: 15px;
+    }
+    @media screen and(max-width: 400px) {
+      font-size: 14px;
+    }
+  }
+  .animGreen {
+    animation: calcGreen 1s linear;
+  }
+  .animRed {
+    animation: calcRed 1s linear;
+  }
+  .animBtn {
+    animation: animBtn 0.5s linear;
+  }
+  .animColor {
+    animation: animColor 0.5s linear;
+  }
+  .start {
+    display: block;
+    margin: 10px auto 0;
+    width: 100%;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    user-select: none;
+    overflow: hidden;
+    padding: 10px 15px;
+    background: #274d85;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+    &:hover {
+      color: #fff;
+    }
+  }
+  .ripple {
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(0);
+    position: absolute;
+    opacity: 1;
+    animation: ripple 0.5s linear;
+  }
+  .status {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+    border-radius: 10px;
+    background: whitesmoke;
+    padding: 5px;
+    &__out {
+      width: 50px;
+      border: none;
+      outline: none;
+      background: transparent;
+      font-size: 14px;
+      font-weight: 600;
+      text-align: center;
+    }
+    &__losing {
+      @media screen and(max-width: 610px) {
+        margin-left: 45px;
+      }
+      @media screen and(max-width: 360px) {
+        margin: 0;
+      }
+    }
+  }
+  #money {
+    color: goldenrod;
+  }
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  margin: 0;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: number-input;
 }
 .section-skills {
   font-family: TeXGyreAdventor-Italic;

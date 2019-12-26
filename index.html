@@ -24,7 +24,7 @@
 			</header>
 		</div>
 		<main class="main">
-			<sect class="section-about" id="home">
+			<section class="section-about" id="home">
 				<div class="container">
 					<div class="wrapp-about">
 						<h2 class="head">Обо мне</h2>
@@ -33,7 +33,7 @@
 								<img src="img/photo.jpg" alt="Моя фотография" class="about__photo">
 							</div>
 							<div class="about__wrapp-text">
-								<h1 class="about__name">Привет, меня зовут<br><span class="right">Андрей</span>
+								<h1 class="about__name">Привет, меня зовут<br><span class="right">Андрей Западный</span>
 								</h1>
 								<p class="about__text">Мне 24 года и я, молодой веб-разработчик. Делаю свою работу
 									качественно и быстро, а главное дёшево! Внимательный к мелким вещам. Делаю
@@ -91,184 +91,278 @@
 							</div>
 						</div>
 					</div>
-
-					<button type="button" class="about__btn">больше инфы</button>
+					<div class="section-game">
+						<div class="circle">
+							<input type="text" name="circleNum" class="circle__num" id="circleNum">
+							<span class="circle__shine"></span>
+						</div>
+						<div class="setting">
+							<h2 class="setting__text setting__text_absolute"></h2>
+							<h2 class="setting__title">Чётное или нёчетное<span class="info1"></span></h2>
+							<p class="setting__text text-info1">Игра заключеется в том, что вам нужно угадать какое
+								число
+								будет, <b>чётное</b>
+								или <b>нечётное</b>.
+							</p>
+							<form class="setting__form">
+								<div class="wrapp-game">
+									<div class="block-game">
+										<h3 class="setting__title setting__title_after">Кратное число <span
+												class="info2"></span>
+										</h3>
+										<p class="setting__text text-info2">
+											Если угадываете число кратное вашему числу то выйграш в <b>5 раз</b> больше
+										</p>
+										<label for="checkbox" class="setting__check-text" id="setBox1">
+											<input type="checkbox" class="setting__checkbox" id="checkbox" checked>
+											играть
+										</label>
+										<div class="wrapp-num">
+											<div class="setting__num-text setting__num-text_margin2">
+												<span class="setting__arrow-up"></span>
+												<span class="setting__arrow-down"></span>
+												<input type="number" class="check-in" value="10" disabled id="numGame">
+												Число
+											</div>
+											<div class="setting__num-text setting__num-text_margin1">
+												<span class="setting__arrow-up"></span>
+												<span class="setting__arrow-down"></span>
+												<input type="number" class="check-in" value="10" disabled id="rate1">
+												Ставка
+											</div>
+										</div>
+									</div>
+									<div class="setting__out-num">
+										<h2 class="text-out">Сыграем?</h2>
+										<input type="number" class="this__num" disabled value="10">
+										<span class="anim-circle"></span>
+										<span class="anim-circle"></span>
+										<span class="anim-circle"></span>
+									</div>
+									<div class="block-game">
+										<h3 class="setting__title">Сделайте выбор</h3>
+										<div>
+											<label for="checkbox2" class="setting__check-text" id="setBox2">
+												<input type="checkbox" class="setting__checkbox" id="checkbox2" checked>
+												играть
+											</label>
+										</div>
+										<div class="wrapp-num">
+											<div class="setting__radio-text">
+												<input type="radio" name="choice" value="x" class="setting__radio"
+													checked>
+												Чёт<span class="hide">ное</span>
+											</div>
+											<div class="setting__radio-text">
+												<input type="radio" name="choice" value="z" class="setting__radio">
+												Нечёт<span class="hide">ное</span>
+											</div>
+											<div class="setting__num-text setting__num-text_margin2">
+												<span class="setting__arrow-up"></span>
+												<span class="setting__arrow-down"></span>
+												<input type="number" class="check-in" value="10" disabled id="rate2">
+												Ставка
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="status">
+									<div class="status__money">Ваша казна: <input type="text" readonly value="200"
+											class="status__out" id="money">
+									</div>
+									<div class="status__bigWin">Мега побед: <input type="text" readonly value="0"
+											class="status__out" id="bigWin"> </div>
+									<div class="status__win">Побед: <input type="text" readonly value="0"
+											class="status__out" id="win"> </div>
+									<div class="status__losing">Поражений: <input type="text" readonly value="0"
+											class="status__out" id="losing">
+									</div>
+								</div>
+								<button class="start" id="go">Играть
+								</button>
+							</form>
+						</div>
+					</div>
+					<div class="wrapp-btn">
+						<button type="button" class="about__btn">больше инфы</button>
+						<button type="button" class="about__btn" id="mini-game">мини игра</button>
+					</div>
 				</div>
-				</section>
-				<section class="section-skills" id="skills">
-					<div class="container">
-						<h2 class="head">Мои скилы</h2>
-						<div class="skills">
-							<div>
-								<h2 class="title">HTML</h2>
-								<div class="skills-block">
-									<h2 class="procent" data-procent="70">70%</h2>
-									<div class="elements1 spin"></div>
-									<div class="elements2 spin"></div>
-									<div class="elements3 spin"></div>
-									<div class="elements4 spin"></div>
-									<div class="elements5 spin"></div>
-									<div class="elements6 spin"></div>
-									<div class="elements7 spin"></div>
-									<div class="elements8 spin"></div>
-									<div class="elements9 spin"></div>
-									<div class="elements10 spin"></div>
-									<div class="elements11 spin"></div>
-									<div class="elements12 spin"></div>
-									<div class="elements13  spin_on"></div>
-									<div class="elements14"></div>
-									<div class="elements15"></div>
-									<div class="elements16"></div>
-									<div class="elements17"></div>
-									<div class="elements18"></div>
-									<div class="elements19"></div>
-									<div class="elements20"></div>
-								</div>
+			</section>
+			<section class="section-skills" id="skills">
+				<div class="container">
+					<h2 class="head">Мои скилы</h2>
+					<div class="skills">
+						<div>
+							<h2 class="title">HTML</h2>
+							<div class="skills-block">
+								<h2 class="procent" data-procent="70">70%</h2>
+								<div class="elements1 spin"></div>
+								<div class="elements2 spin"></div>
+								<div class="elements3 spin"></div>
+								<div class="elements4 spin"></div>
+								<div class="elements5 spin"></div>
+								<div class="elements6 spin"></div>
+								<div class="elements7 spin"></div>
+								<div class="elements8 spin"></div>
+								<div class="elements9 spin"></div>
+								<div class="elements10 spin"></div>
+								<div class="elements11 spin"></div>
+								<div class="elements12 spin"></div>
+								<div class="elements13  spin_on"></div>
+								<div class="elements14"></div>
+								<div class="elements15"></div>
+								<div class="elements16"></div>
+								<div class="elements17"></div>
+								<div class="elements18"></div>
+								<div class="elements19"></div>
+								<div class="elements20"></div>
 							</div>
-							<div>
-								<h2 class="title">CSS</h2>
-								<div class="skills-block">
-									<h2 class="procent" data-procent="70">70%</h2>
-									<div class="elements1 spin"></div>
-									<div class="elements2 spin"></div>
-									<div class="elements3 spin"></div>
-									<div class="elements4 spin"></div>
-									<div class="elements5 spin"></div>
-									<div class="elements6 spin"></div>
-									<div class="elements7 spin"></div>
-									<div class="elements8 spin"></div>
-									<div class="elements9 spin"></div>
-									<div class="elements10 spin"></div>
-									<div class="elements11 spin"></div>
-									<div class="elements12 spin"></div>
-									<div class="elements13 spin_on"></div>
-									<div class="elements14"></div>
-									<div class="elements15"></div>
-									<div class="elements16"></div>
-									<div class="elements17"></div>
-									<div class="elements18"></div>
-									<div class="elements19"></div>
-									<div class="elements20"></div>
-								</div>
+						</div>
+						<div>
+							<h2 class="title">CSS</h2>
+							<div class="skills-block">
+								<h2 class="procent" data-procent="70">70%</h2>
+								<div class="elements1 spin"></div>
+								<div class="elements2 spin"></div>
+								<div class="elements3 spin"></div>
+								<div class="elements4 spin"></div>
+								<div class="elements5 spin"></div>
+								<div class="elements6 spin"></div>
+								<div class="elements7 spin"></div>
+								<div class="elements8 spin"></div>
+								<div class="elements9 spin"></div>
+								<div class="elements10 spin"></div>
+								<div class="elements11 spin"></div>
+								<div class="elements12 spin"></div>
+								<div class="elements13 spin_on"></div>
+								<div class="elements14"></div>
+								<div class="elements15"></div>
+								<div class="elements16"></div>
+								<div class="elements17"></div>
+								<div class="elements18"></div>
+								<div class="elements19"></div>
+								<div class="elements20"></div>
 							</div>
-							<div>
-								<h2 class="title">JQ/JS</h2>
-								<div class="skills-block">
-									<h2 class="procent" data-procent="13">13%</h2>
-									<div class="elements1 spin"></div>
-									<div class="elements2 spin"></div>
-									<div class="elements3 spin"></div>
-									<div class="elements4 spin_on"></div>
-									<div class="elements5 "></div>
-									<div class="elements6"></div>
-									<div class="elements7"></div>
-									<div class="elements8"></div>
-									<div class="elements9"></div>
-									<div class="elements10"></div>
-									<div class="elements11"></div>
-									<div class="elements12"></div>
-									<div class="elements13"></div>
-									<div class="elements14"></div>
-									<div class="elements15"></div>
-									<div class="elements16"></div>
-									<div class="elements17"></div>
-									<div class="elements18"></div>
-									<div class="elements19"></div>
-									<div class="elements20"></div>
-								</div>
+						</div>
+						<div>
+							<h2 class="title">JQ/JS</h2>
+							<div class="skills-block">
+								<h2 class="procent" data-procent="13">13%</h2>
+								<div class="elements1 spin"></div>
+								<div class="elements2 spin"></div>
+								<div class="elements3 spin"></div>
+								<div class="elements4 spin_on"></div>
+								<div class="elements5 "></div>
+								<div class="elements6"></div>
+								<div class="elements7"></div>
+								<div class="elements8"></div>
+								<div class="elements9"></div>
+								<div class="elements10"></div>
+								<div class="elements11"></div>
+								<div class="elements12"></div>
+								<div class="elements13"></div>
+								<div class="elements14"></div>
+								<div class="elements15"></div>
+								<div class="elements16"></div>
+								<div class="elements17"></div>
+								<div class="elements18"></div>
+								<div class="elements19"></div>
+								<div class="elements20"></div>
 							</div>
-							<div>
-								<h2 class="title">PHOTOSHOP</h2>
-								<div class="skills-block">
-									<h2 class="procent" data-procent="50">50%</h2>
-									<div class="elements1 spin"></div>
-									<div class="elements2 spin"></div>
-									<div class="elements3 spin"></div>
-									<div class="elements4 spin"></div>
-									<div class="elements5 spin"></div>
-									<div class="elements6 spin"></div>
-									<div class="elements7 spin"></div>
-									<div class="elements8 spin"></div>
-									<div class="elements9 spin"></div>
-									<div class="elements10 spin"></div>
-									<div class="elements11 spin_on"></div>
-									<div class="elements12"></div>
-									<div class="elements13"></div>
-									<div class="elements14"></div>
-									<div class="elements15"></div>
-									<div class="elements16"></div>
-									<div class="elements17"></div>
-									<div class="elements18"></div>
-									<div class="elements19"></div>
-									<div class="elements20"></div>
-								</div>
+						</div>
+						<div>
+							<h2 class="title">PHOTOSHOP</h2>
+							<div class="skills-block">
+								<h2 class="procent" data-procent="50">50%</h2>
+								<div class="elements1 spin"></div>
+								<div class="elements2 spin"></div>
+								<div class="elements3 spin"></div>
+								<div class="elements4 spin"></div>
+								<div class="elements5 spin"></div>
+								<div class="elements6 spin"></div>
+								<div class="elements7 spin"></div>
+								<div class="elements8 spin"></div>
+								<div class="elements9 spin"></div>
+								<div class="elements10 spin"></div>
+								<div class="elements11 spin_on"></div>
+								<div class="elements12"></div>
+								<div class="elements13"></div>
+								<div class="elements14"></div>
+								<div class="elements15"></div>
+								<div class="elements16"></div>
+								<div class="elements17"></div>
+								<div class="elements18"></div>
+								<div class="elements19"></div>
+								<div class="elements20"></div>
 							</div>
 						</div>
 					</div>
-				</section>
-				<section class="section-portfolio" id="portfolio">
-					<div class="container">
-						<h2 class="head">Недавные работы</h2>
-						<div class="wrapp-portfolio">
-							<div class="portfolio">
-								<div class="portfolio__wrapp-img">
-									<img src="img/poll.jpg" alt="Картинка сайта" class="portfolio__img">
-								</div>
-								<div class="portfolio__text">
-									<h3 class="portfolio__title">Сайт листовка</h3>
-									<a href="https://andreyzapadniy.github.io/test_investor/" target="_blank"
-										class="portfolio__link">Посмотреть сайт</a>
-								</div>
+				</div>
+			</section>
+			<section class="section-portfolio" id="portfolio">
+				<div class="container">
+					<h2 class="head">Недавные работы</h2>
+					<div class="wrapp-portfolio">
+						<div class="portfolio">
+							<div class="portfolio__wrapp-img">
+								<img src="img/poll.jpg" alt="Картинка сайта" class="portfolio__img">
 							</div>
-							<div class="portfolio">
-								<div class="portfolio__wrapp-img">
-									<img src="img/drips.jpg" alt="Картинка сайта" class="portfolio__img">
-								</div>
-								<div class="portfolio__text">
-									<h3 class="portfolio__title">Графити</h3>
-									<a href="https://andreyzapadniy.github.io/graffiti.io/" target="_blank"
-										class="portfolio__link">Посмотреть сайт</a>
-								</div>
+							<div class="portfolio__text">
+								<h3 class="portfolio__title">Сайт листовка</h3>
+								<a href="https://andreyzapadniy.github.io/test_investor/" target="_blank"
+									class="portfolio__link">Посмотреть сайт</a>
 							</div>
-							<div class="portfolio">
-								<div class="portfolio__wrapp-img">
-									<img src="img/holiday.jpg" alt="Картинка сайта" class="portfolio__img">
-								</div>
-								<div class="portfolio__text">
-									<h3 class="portfolio__title">Сайт для заказа празника</h3>
-									<a href="https://andreyzapadniy.github.io/holiday/" target="_blank"
-										class="portfolio__link">Посмотреть сайт</a>
-								</div>
+						</div>
+						<div class="portfolio">
+							<div class="portfolio__wrapp-img">
+								<img src="img/drips.jpg" alt="Картинка сайта" class="portfolio__img">
 							</div>
-							<div class="portfolio">
-								<div class="portfolio__wrapp-img">
-									<img src="img/vegg.jpg" alt="Картинка сайта" class="portfolio__img">
-								</div>
-								<div class="portfolio__text">
-									<h3 class="portfolio__title">Ресторан</h3>
-									<a href="https://andreyzapadniy.github.io/restaurant/" target="_blank"
-										class="portfolio__link">Посмотреть сайт</a>
-								</div>
+							<div class="portfolio__text">
+								<h3 class="portfolio__title">Графити</h3>
+								<a href="https://andreyzapadniy.github.io/graffiti.io/" target="_blank"
+									class="portfolio__link">Посмотреть сайт</a>
+							</div>
+						</div>
+						<div class="portfolio">
+							<div class="portfolio__wrapp-img">
+								<img src="img/holiday.jpg" alt="Картинка сайта" class="portfolio__img">
+							</div>
+							<div class="portfolio__text">
+								<h3 class="portfolio__title">Сайт для заказа празника</h3>
+								<a href="https://andreyzapadniy.github.io/holiday/" target="_blank"
+									class="portfolio__link">Посмотреть сайт</a>
+							</div>
+						</div>
+						<div class="portfolio">
+							<div class="portfolio__wrapp-img">
+								<img src="img/vegg.jpg" alt="Картинка сайта" class="portfolio__img">
+							</div>
+							<div class="portfolio__text">
+								<h3 class="portfolio__title">Ресторан</h3>
+								<a href="https://andreyzapadniy.github.io/restaurant/" target="_blank"
+									class="portfolio__link">Посмотреть сайт</a>
 							</div>
 						</div>
 					</div>
-				</section>
-				<section class="section-contacts" id="contacts">
-					<div class="container">
-						<h2 class="head head_color">Контакты</h2>
-						<div class="contacts">
-							<h3 class="contacts__title">Звоните и пишите в любое время суток</h3>
-							<div class="contacts__icons">
-								<button href="#" class="contacts__link"></button>
-								<a href="https://teleg.run/nafanyaWeb" target="_blank" class="contacts__link"></a>
-								<button href="#" class="contacts__link"></button>
-								<a href="https://vk.com/99androed99" target="_blank" class="contacts__link"></a>
-								<span class="contacts__modal" id="gmail">lowka670@gmail.com</span>
-								<span class="contacts__modal" id="whatsapp">+7 951 823 45 05</span>
-							</div>
+				</div>
+			</section>
+			<section class="section-contacts" id="contacts">
+				<div class="container">
+					<h2 class="head head_color">Контакты</h2>
+					<div class="contacts">
+						<h3 class="contacts__title">Звоните и пишите в любое время суток</h3>
+						<div class="contacts__icons">
+							<button href="#" class="contacts__link"></button>
+							<a href="https://teleg.run/nafanyaWeb" target="_blank" class="contacts__link"></a>
+							<button href="#" class="contacts__link"></button>
+							<a href="https://vk.com/99androed99" target="_blank" class="contacts__link"></a>
+							<span class="contacts__modal" id="gmail">lowka670@gmail.com</span>
+							<span class="contacts__modal" id="whatsapp">+7 951 823 45 05</span>
 						</div>
 					</div>
-				</section>
+				</div>
+			</section>
 		</main>
 		<footer class="footer">
 
@@ -279,6 +373,7 @@
 	</script>
 	<script src="js/slick.min.js"></script>
 	<script src="js/js.js"></script>
+	<script src="js/game.js"></script>
 	<script>
 		$(document).on('ready', function () {
 			$(".slider").slick({

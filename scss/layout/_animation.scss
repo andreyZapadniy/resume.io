@@ -445,3 +445,164 @@
     transform: scale(1);
   }
 }
+@keyframes circleStep {
+  0% {
+    left: 0;
+  }
+  10% {
+    left: 5%;
+  }
+  20% {
+    left: -5%;
+  }
+  30% {
+    left: 5%;
+  }
+  40% {
+    left: -5%;
+  }
+  50% {
+    left: 5%;
+  }
+  60% {
+    left: -5%;
+  }
+  70% {
+    left: 5%;
+  }
+  80% {
+    left: -5%;
+  }
+  90% {
+    left: 5%;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes circleStep2 {
+  0% {
+    left: 50%;
+  }
+  10% {
+    left: 55%;
+  }
+  20% {
+    left: 45%;
+  }
+  30% {
+    left: 55%;
+  }
+  40% {
+    left: 45%;
+  }
+  50% {
+    left: 55%;
+  }
+  60% {
+    left: 45%;
+  }
+  70% {
+    left: 55%;
+  }
+  80% {
+    left: 45%;
+  }
+  90% {
+    left: 55%;
+  }
+  100% {
+    left: 50%;
+  }
+}
+@keyframes ripple {
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+@keyframes calcGreen {
+  0% {
+    border: 2px solid transparent;
+  }
+  25% {
+    border: 2px solid green;
+  }
+  50% {
+    border: 2px solid transparent;
+  }
+  75% {
+    border: 2px solid green;
+  }
+  100% {
+    border: 2px solid transparent;
+  }
+}
+@keyframes calcRed {
+  0% {
+    border: 2px solid transparent;
+  }
+  25% {
+    border: 2px solid red;
+  }
+  50% {
+    border: 2px solid transparent;
+  }
+  75% {
+    border: 2px solid red;
+  }
+  100% {
+    border: 2px solid transparent;
+  }
+}
+@keyframes animBtn {
+  0% {
+    background: #274d85;
+    margin-left: 0;
+  }
+  25% {
+    background: #da2929;
+    box-shadow: inset 0px 0px 15px darkred;
+    margin-left: 3px;
+  }
+  50% {
+    background: #274d85;
+    box-shadow: inset 0px 0px 15px transparent;
+    margin-left: -3px;
+  }
+  75% {
+    background: #da2929;
+    box-shadow: inset 0px 0px 15px darkred;
+    margin-left: 3px;
+  }
+  100% {
+    background: #274d85;
+    box-shadow: inset 0px 0px 15px transparent;
+    margin-left: 0;
+  }
+}
+@keyframes animColor {
+  0% {
+    color: goldenrod;
+  }
+  25% {
+    color: red;
+  }
+  50% {
+    color: goldenrod;
+  }
+  75% {
+    color: red;
+  }
+  100% {
+    color: goldenrod;
+  }
+}
+@keyframes circleDots {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

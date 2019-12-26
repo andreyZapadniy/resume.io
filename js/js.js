@@ -111,16 +111,37 @@ for (let i = 0; i < skillsBlock.length; i++) {
     };
 };
 let aboutBtn = document.querySelector(".about__btn"),
+    btnGame = document.querySelector("#mini-game"),
+    sectGame = document.querySelector(".section-game"),
     aboutGlobal = document.querySelector(".wrapp-about"),
     aboutMore = document.querySelector(".about__wrapp-more"),
     slider = document.querySelector(".slider");
 
 aboutBtn.addEventListener("click", function () {
-    aboutGlobal.classList.toggle("wrapp-about_hide");
     aboutMore.classList.toggle("about__wrapp-more_show");
     slider.classList.toggle("slider_active");
-    this.classList.toggle("about__btn_active")
+    this.classList.toggle("about__btn_active");
+    if (btnGame.classList.contains("about__btn_active")) {
+        btnGame.classList.remove("about__btn_active");
+        aboutGlobal.classList.add("wrapp-about_hide");
+        sectGame.classList.toggle("about__wrapp-more_show");
+    } else {
+        aboutGlobal.classList.toggle("wrapp-about_hide");
+    }
 });
+btnGame.addEventListener("click", function () {
+    if (aboutBtn.classList.contains("about__btn_active")) {
+        aboutBtn.classList.remove("about__btn_active");
+        aboutGlobal.classList.add("wrapp-about_hide");
+        aboutMore.classList.toggle("about__wrapp-more_show");
+        slider.classList.toggle("slider_active");
+    } else {
+        aboutGlobal.classList.toggle("wrapp-about_hide");
+    }
+    sectGame.classList.toggle("about__wrapp-more_show");
+    this.classList.toggle("about__btn_active");
+});
+
 let contactsModal = document.querySelectorAll(".contacts__modal"),
     contactsLink = document.querySelectorAll(".contacts__link");
 
@@ -133,6 +154,5 @@ for (let i = 0; i < contactsLink.length; i++) {
             contactsModal[1].classList.toggle("show");
             contactsModal[0].classList.remove("show");
         }
-
     })
 }
