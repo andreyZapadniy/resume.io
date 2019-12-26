@@ -618,8 +618,9 @@ section {
     .section-game .setting__arrow-up, .section-game .setting__arrow-down {
       position: absolute;
       content: "";
-      width: 15px;
+      width: 30px;
       height: 20px;
+      bottom: -25px;
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -629,27 +630,24 @@ section {
           display: block; } }
     .section-game .setting__arrow-up {
       background-image: url("../img/arrow_game.png");
-      left: 48px;
-      top: -2px; }
-      @media screen and (max-width: 520px) {
-        .section-game .setting__arrow-up {
-          top: -5px; } }
-      @media screen and (max-width: 400px) {
-        .section-game .setting__arrow-up {
-          top: -8px; } }
+      -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      transform: rotate(90deg);
+      right: 0; }
+      .section-game .setting__arrow-up:active {
+        -webkit-transform: rotate(90deg) scale(0.9);
+        -ms-transform: rotate(90deg) scale(0.9);
+        transform: rotate(90deg) scale(0.9); }
     .section-game .setting__arrow-down {
       background-image: url("../img/arrow_game.png");
-      left: 48px;
-      top: 22px;
-      -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-      transform: rotate(180deg); }
-      @media screen and (max-width: 520px) {
-        .section-game .setting__arrow-down {
-          top: 20px; } }
-      @media screen and (max-width: 400px) {
-        .section-game .setting__arrow-down {
-          top: 15px; } }
+      -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+      left: 0; }
+      .section-game .setting__arrow-down:active {
+        -webkit-transform: rotate(-90deg) scale(0.9);
+        -ms-transform: rotate(-90deg) scale(0.9);
+        transform: rotate(-90deg) scale(0.9); }
     .section-game .setting__check-text {
       font-size: 16px;
       color: blue;
@@ -776,8 +774,8 @@ section {
       content: "?";
       background: cadetblue;
       border-radius: 50%;
-      width: 20px;
-      height: 20px;
+      width: 22px;
+      height: 22px;
       right: -40px;
       top: 53%;
       -webkit-transform: translate(-50%, -50%);
@@ -791,6 +789,9 @@ section {
     .section-game .info2:hover:after {
       color: #fff;
       background: #365b5c; }
+  .section-game .info-active:after {
+    -webkit-animation: colorInfo 0.5s linear infinite;
+    animation: colorInfo 0.5s linear infinite; }
   .section-game .info1,
   .section-game .info2 {
     z-index: 5; }
@@ -2321,3 +2322,15 @@ input[type="number"]:focus {
     opacity: 1; }
   100% {
     opacity: 0; } }
+
+@-webkit-keyframes colorInfo {
+  0% {
+    background: cadetblue; }
+  100% {
+    background: blue; } }
+
+@keyframes colorInfo {
+  0% {
+    background: cadetblue; }
+  100% {
+    background: blue; } }

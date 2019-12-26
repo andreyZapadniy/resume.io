@@ -351,8 +351,9 @@
     &__arrow-down {
       position: absolute;
       content: "";
-      width: 15px;
+      width: 30px;
       height: 20px;
+      bottom: -25px;
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -363,25 +364,18 @@
     }
     &__arrow-up {
       background-image: url("../img/arrow_game.png");
-      left: 48px;
-      top: -2px;
-      @media screen and(max-width: 520px) {
-        top: -5px;
-      }
-      @media screen and(max-width: 400px) {
-        top: -8px;
+      transform: rotate(90deg);
+      right: 0;
+      &:active {
+        transform: rotate(90deg) scale(0.9);
       }
     }
     &__arrow-down {
       background-image: url("../img/arrow_game.png");
-      left: 48px;
-      top: 22px;
-      transform: rotate(180deg);
-      @media screen and(max-width: 520px) {
-        top: 20px;
-      }
-      @media screen and(max-width: 400px) {
-        top: 15px;
+      transform: rotate(-90deg);
+      left: 0;
+      &:active {
+        transform: rotate(-90deg) scale(0.9);
       }
     }
     &__check-text {
@@ -497,8 +491,8 @@
       content: "?";
       background: cadetblue;
       border-radius: 50%;
-      width: 20px;
-      height: 20px;
+      width: 22px;
+      height: 22px;
       right: -40px;
       top: 53%;
       transform: translate(-50%, -50%);
@@ -510,6 +504,11 @@
         color: #fff;
         background: rgb(54, 91, 92);
       }
+    }
+  }
+  .info-active {
+    &:after {
+      animation: colorInfo 0.5s linear infinite;
     }
   }
   .info1,

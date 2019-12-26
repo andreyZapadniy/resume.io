@@ -606,3 +606,11 @@
     opacity: 0;
   }
 }
+@keyframes colorInfo {
+  0% {
+    background: cadetblue;
+  }
+  100% {
+    background: blue;
+  }
+}

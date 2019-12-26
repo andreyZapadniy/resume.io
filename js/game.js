@@ -377,29 +377,34 @@ start.addEventListener("click", (e) => {
     let nowCircleNum = circleNum.value = getRandomInt(30);
     ////////////////////////////////////////////
     if (width <= 400) {
-        outNum.style.opacity = 0;
         for (let i = 0; i < circleDots.length; i++) {
-            setTimeout(() => {
-                outNum.style.opacity = 1;
+            if (+money.value <= 0) {
+                money.value = 0;
+                outNum.innerHTML = "Конец игры";
+                info1.classList.add("info-active");
+                setTimeout(() => {
+                    info1.classList.remove("info-active");
+
+                }, 1000);
+            } else {
+                thisNum.style.display = "none";
+                thisNum.style.opacity = 0;
                 outNum.innerHTML = "Это число";
                 circleDots[i].classList.add("play" + i);
-            }, 200);
-            setTimeout(() => {
-                circleDots[i].style.opacity = 0;
-            }, 900);
-            setTimeout(() => {
-                circleDots[i].classList.remove("play" + i);
-                thisNum.style.display = "block";
-                thisNum.style.opacity = 1;
-                thisNum.value = nowCircleNum;
-            }, 1000);
-            setTimeout(() => {
-                thisNum.style.opacity = 0;
-            }, 1800);
-            setTimeout(() => {
-                thisNum.style.display = "none";
-                outNum.innerHTML = "Сыграем?";
-            }, 1900);
+                setTimeout(() => {
+                    circleDots[i].classList.remove("play" + i);
+                    thisNum.style.display = "block";
+                    thisNum.style.opacity = 1;
+                    thisNum.value = nowCircleNum;
+                }, 1000);
+            }
+
+            // setTimeout(() => {
+            //     thisNum.style.opacity = 0;
+            // }, 1800);
+            // setTimeout(() => {
+            //     thisNum.style.display = "none";
+            // }, 1900);
 
         }
     }
