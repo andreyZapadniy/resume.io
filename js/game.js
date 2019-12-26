@@ -64,7 +64,7 @@ const downNum = document.querySelectorAll(".setting__arrow-down");
 const start = document.querySelector(".start");
 
 ///////////////////зажатие на кнопки/////////////////////////
-upNum[0].addEventListener("mousedown", () => {
+upNum[0].addEventListener("touchstart", () => {
     let a = setInterval(() => {
         if (+numGame.value > 29) {
             clearInterval(a);
@@ -72,12 +72,12 @@ upNum[0].addEventListener("mousedown", () => {
             numGame.value = +numGame.value + 1;
         }
     }, 200);
-    this.addEventListener("mouseup", () => {
+    this.addEventListener("touchend", () => {
         clearInterval(a);
     })
 });
 
-upNum[1].addEventListener("mousedown", () => {
+upNum[1].addEventListener("touchstart", () => {
     let a = setInterval(() => {
         if (+rate1.value + +rate2.value < +money.value) {
             rate1.value = +rate1.value + 1;
@@ -90,11 +90,11 @@ upNum[1].addEventListener("mousedown", () => {
             rate2.value = 1;
         }
     }, 100);
-    this.addEventListener("mouseup", () => {
+    this.addEventListener("touchend", () => {
         clearInterval(a);
     })
 });
-upNum[2].addEventListener("mousedown", () => {
+upNum[2].addEventListener("touchstart", () => {
     let a = setInterval(() => {
         if (+rate2.value + +rate1.value < +money.value) {
             rate2.value = +rate2.value + 1;
@@ -107,11 +107,11 @@ upNum[2].addEventListener("mousedown", () => {
             rate2.value = 1;
         }
     }, 100);
-    this.addEventListener("mouseup", () => {
+    this.addEventListener("touchend", () => {
         clearInterval(a);
     })
 });
-downNum[0].addEventListener("mousedown", () => {
+downNum[0].addEventListener("touchstart", () => {
     let a = setInterval(() => {
         if (+numGame.value <= 0) {
             clearInterval(a);
@@ -119,11 +119,11 @@ downNum[0].addEventListener("mousedown", () => {
             numGame.value = +numGame.value - 1;
         }
     }, 200);
-    this.addEventListener("mouseup", () => {
+    this.addEventListener("touchend", () => {
         clearInterval(a);
     })
 });
-downNum[1].addEventListener("mousedown", () => {
+downNum[1].addEventListener("touchstart", () => {
     let a = setInterval(() => {
         if (checkbox2.checked == false && +rate1.value <= +money.value && +rate1.value > 1) {
             rate1.value = +rate1.value - 1;
@@ -134,11 +134,11 @@ downNum[1].addEventListener("mousedown", () => {
             clearInterval(a);
         }
     }, 100);
-    this.addEventListener("mouseup", () => {
+    this.addEventListener("touchend", () => {
         clearInterval(a);
     })
 });
-downNum[2].addEventListener("mousedown", () => {
+downNum[2].addEventListener("touchstart", () => {
     let a = setInterval(() => {
         if (checkbox1.checked == false && +rate2.value <= +money.value && +rate2.value > 1) {
             rate2.value = +rate2.value - 1;
@@ -149,7 +149,7 @@ downNum[2].addEventListener("mousedown", () => {
             clearInterval(a);
         }
     }, 100);
-    this.addEventListener("mouseup", () => {
+    this.addEventListener("touchend", () => {
         clearInterval(a);
     })
 });
