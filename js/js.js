@@ -111,7 +111,7 @@ for (let i = 0; i < skillsBlock.length; i++) {
     };
 };
 let aboutBtn = document.querySelector(".about__btn"),
-    btnGame = document.querySelector(".mini-game"),
+    btnGame = document.querySelector("#mini-game"),
     sectGame = document.querySelector(".section-game"),
     aboutGlobal = document.querySelector(".wrapp-about"),
     aboutMore = document.querySelector(".about__wrapp-more"),
