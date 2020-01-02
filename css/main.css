@@ -361,7 +361,6 @@ section {
     position: absolute;
     top: 0px;
     left: 0;
-    padding-bottom: 50px;
     width: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
