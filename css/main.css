@@ -97,13 +97,7 @@ section {
         width: 20%; } }
 
 .right {
-  margin-left: 35%; }
-  @media screen and (max-width: 880px) {
-    .right {
-      margin-left: 15%; } }
-  @media screen and (max-width: 768px) {
-    .right {
-      margin-left: 35%; } }
+  margin-left: 60%; }
   @media screen and (max-width: 480px) {
     .right {
       margin-left: 0;
@@ -257,13 +251,14 @@ section {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding-bottom: 100px; }
+  padding-bottom: 70px; }
   @media screen and (max-width: 768px) {
     .section-about .about {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
-      flex-direction: column; } }
+      flex-direction: column;
+      padding-bottom: 60px; } }
   .section-about .about__wrapp-photo {
     max-width: 350px;
     height: 350px;
@@ -287,7 +282,8 @@ section {
         max-width: 400px; } }
     @media screen and (max-width: 768px) {
       .section-about .about__wrapp-text {
-        max-width: 500px; } }
+        max-width: 500px;
+        margin: 0 auto; } }
   .section-about .about__name {
     font-family: TeXGyreAdventor-Bold;
     font-size: 32px;
@@ -329,6 +325,7 @@ section {
     text-transform: uppercase;
     padding: 10px 20px;
     margin-right: 15px;
+    background: #e1e1e1;
     color: rgba(131, 137, 214, 0.5);
     -webkit-transition: color 0.3s, -webkit-box-shadow 0.3s;
     transition: color 0.3s, -webkit-box-shadow 0.3s;
@@ -400,6 +397,12 @@ section {
     height: 400px; }
     @media screen and (max-width: 768px) {
       .section-about .about__wrapp-icons {
+        position: absolute;
+        opacity: 0.2;
+        left: 50%;
+        -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+        transform: translate(-50%);
         height: 300px;
         width: 70%; } }
     @media screen and (max-width: 640px) {
@@ -440,9 +443,9 @@ section {
   height: 100%;
   margin: auto; }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 765px) {
   #mini-game {
-    margin-top: 15px; } }
+    display: none; } }
 
 .section-game {
   display: -webkit-box;
@@ -560,9 +563,10 @@ section {
     .section-game .circle__active {
       -webkit-animation: circleStep 1s linear;
       animation: circleStep 1s linear; }
-    .section-game .circle__active2 {
-      -webkit-animation: circleStep2 1s linear;
-      animation: circleStep2 1s linear; }
+      @media screen and (max-width: 800px) {
+        .section-game .circle__active {
+          -webkit-animation: circleStep2 1s linear;
+          animation: circleStep2 1s linear; } }
   .section-game .setting {
     max-width: 600px;
     width: 100%;

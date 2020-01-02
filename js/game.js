@@ -357,22 +357,10 @@ start.addEventListener("click", (e) => {
     setTimeout(() => {
         start.style.pointerEvents = "all";
     }, 2000);
-    if (width > 400 && width <= 800) {
-        circle.style.opacity = "1";
-        circle.style.zIndex = "10";
-        circle.classList.add("circle__active2");
-        setTimeout(() => {
-            circle.style.opacity = "0.4";
-            circle.style.zIndex = "1";
-            circle.classList.remove("circle__active2");
-        }, 1500);
-
-    } else {
-        circle.classList.add("circle__active");
-        setTimeout(() => {
-            circle.classList.remove("circle__active");
-        }, 1010);
-    }
+    circle.classList.add("circle__active");
+    setTimeout(() => {
+        circle.classList.remove("circle__active");
+    }, 1010);
     circleNum.style.opacity = "0";
     let nowCircleNum = circleNum.value = getRandomInt(30);
     ////////////////////////////////////////////
