@@ -156,3 +156,18 @@ for (let i = 0; i < contactsLink.length; i++) {
         }
     })
 }
+
+// const stocSlider = document.querySelector(".wrap-stocks");
+window.addEventListener("resize", () => {
+    let width = document.body.offsetWidth;
+    if (width <= 920) {
+        // stocSlider.classList.add(".slider");
+        console.log(width);
+
+    } else {
+
+        console.log(width + "big");
+
+        // stocSlider.classList.add(".wrap-stocks");
+    }
+});

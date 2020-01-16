@@ -5,6 +5,28 @@
   left: 0;
   z-index: 100;
   width: 100%;
+  .wrapp-logo {
+    width: 5%;
+    margin-left: 20px;
+    position: relative;
+    @media screen and(max-width: 320px) {
+      display: none;
+    }
+  }
+  .logo {
+    position: absolute;
+    width: 30px;
+    top: -20px;
+    left: -17px;
+    animation: gears 3s infinite linear;
+  }
+  .logo2 {
+    position: absolute;
+    width: 20px;
+    top: 0px;
+    left: -29px;
+    animation: gears 3s infinite linear reverse;
+  }
   .menu {
     display: flex;
     align-items: center;

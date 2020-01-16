@@ -183,6 +183,26 @@ section {
   left: 0;
   z-index: 100;
   width: 100%; }
+  .header .wrapp-logo {
+    width: 5%;
+    margin-left: 20px;
+    position: relative; }
+    @media screen and (max-width: 320px) {
+      .header .wrapp-logo {
+        display: none; } }
+  .header .logo {
+    position: absolute;
+    width: 30px;
+    top: -20px;
+    left: -17px;
+    -webkit-animation: gears 3s infinite linear;
+    animation: gears 3s infinite linear; }
+  .header .logo2 {
+    position: absolute;
+    width: 20px;
+    top: 0px;
+    left: -29px;
+    animation: gears 3s infinite linear reverse; }
   .header .menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2351,3 +2371,19 @@ input[type="number"]:focus {
     background: cadetblue; }
   100% {
     background: blue; } }
+
+@-webkit-keyframes gears {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+    transform: rotateZ(0deg); }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+    transform: rotateZ(360deg); } }
+
+@keyframes gears {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+    transform: rotateZ(0deg); }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+    transform: rotateZ(360deg); } }
